@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths PlayLand 🎮</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌈 Maths PlayLand</div>
+
+    <nav>
+        <button onclick="goHome()">🏠 Home</button>
+        <button onclick="showActivities()">🎮 Activities</button>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="hero-character">👧</div>
+
+        <div>
+            <h1>Welcome to Maths PlayLand!</h1>
+
+            <p>
+                Don't just answer Maths... <b>PLAY IT!</b> 🎮
+            </p>
+
+            <button class="play-btn" onclick="showActivities()">
+                🚀 START PLAYING
+            </button>
+        </div>
+
+    </div>
+
+    <div class="home-cards">
+
+        <div>
+            <span>🍫</span>
+            <h3>Collect</h3>
+        </div>
+
+        <div>
+            <span>🖐️</span>
+            <h3>Drag</h3>
+        </div>
+
+        <div>
+            <span>🏃</span>
+            <h3>Move</h3>
+        </div>
+
+        <div>
+            <span>🎉</span>
+            <h3>Learn</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section id="activities" class="page">
+
+    <h1>🎮 Choose an Activity</h1>
+
+    <p class="subtitle">
+        Touch, drag, move and play!
+    </p>
+
+    <div class="activity-grid">
+
+        <button onclick="startActivity('chocolate')">
+            🍫
+            <strong>Chocolate Collector</strong>
+            <small>Addition</small>
+        </button>
+
+        <button onclick="startActivity('apple')">
+            🍎
+            <strong>Apple Basket</strong>
+            <small>Addition</small>
+        </button>
+
+        <button onclick="startActivity('balloon')">
+            🎈
+            <strong>Balloon Pop</strong>
+            <small>Subtraction</small>
+        </button>
+
+        <button onclick="startActivity('cookie')">
+            🍪
+            <strong>Cookie Monster</strong>
+            <small>Subtraction</small>
+        </button>
+
+        <button onclick="startActivity('groups')">
+            📦
+            <strong>Equal Groups</strong>
+            <small>Multiplication</small>
+        </button>
+
+        <button onclick="startActivity('pizza')">
+            🍕
+            <strong>Pizza Maker</strong>
+            <small>Multiplication</small>
+        </button>
+
+        <button onclick="startActivity('sharing')">
+            🍬
+            <strong>Fair Sharing</strong>
+            <small>Division</small>
+        </button>
+
+        <button onclick="startActivity('bunny')">
+            🐰
+            <strong>Bunny Carrots</strong>
+            <small>Division</small>
+        </button>
+
+        <button onclick="startActivity('numberline')">
+            🚶
+            <strong>Number Line Walk</strong>
+            <small>Numbers</small>
+        </button>
+
+        <button onclick="startActivity('fishing')">
+            🎣
+            <strong>Number Fishing</strong>
+            <small>Counting</small>
+        </button>
+
+        <button onclick="startActivity('pattern')">
+            🚂
+            <strong>Pattern Train</strong>
+            <small>Patterns</small>
+        </button>
+
+        <button onclick="startActivity('sorting')">
+            🧺
+            <strong>Sort Objects</strong>
+            <small>Thinking</small>
+        </button>
+
+        <button onclick="startActivity('scale')">
+            ⚖️
+            <strong>Balance Scale</strong>
+            <small>Numbers</small>
+        </button>
+
+        <button onclick="startActivity('blocks')">
+            🧱
+            <strong>Build a Number</strong>
+            <small>Counting</small>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PLAYGROUND -->
+
+<section id="playground" class="page">
+
+    <div class="play-header">
+
+        <button onclick="showActivities()">
+            ← Activities
+        </button>
+
+        <h2 id="activityTitle">
+            Maths Game
+        </h2>
+
+        <div class="score">
+            ⭐ <span id="score">0</span>
+        </div>
+
+    </div>
+
+    <div class="instruction" id="instruction">
+        Let's play!
+    </div>
+
+    <div id="playArea" class="play-area">
+    </div>
+
+    <div id="message" class="message"></div>
+
+</section>
+
+
+<!-- CELEBRATION -->
+
+<div id="celebration" class="celebration">
+    <div class="celebration-box">
+        <div id="celebrationEmoji">🎉</div>
+        <h2 id="celebrationText">Amazing!</h2>
+        <button onclick="closeCelebration()">Continue 🚀
